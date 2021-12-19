@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int n=3,k,i,j;
+    k=n;
+    for(i=0;i<=n;i++)
+    {
+        k=n;
+        for(j=0;j<=i;j++)
+        {
+                printf("*");
+        }
+        printf("\n");
+    }
+    for(i=0;i<=n;i++)
+    {
+        k=n;
+        for(j=i;j<n;j++)
+        {
+                printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
