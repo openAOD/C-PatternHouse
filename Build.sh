@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for directory in */ ; do
-    cd $directory
+    cd "$directory"
     for file in . ; do
       gcc file
     done
