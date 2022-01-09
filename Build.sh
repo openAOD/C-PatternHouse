@@ -2,7 +2,7 @@
 
 for directory in */ ; do
     cd $directory
-    for file in . do
+    for file in . ; do
       gcc file
     done
 done
