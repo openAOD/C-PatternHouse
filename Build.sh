@@ -1,10 +1,12 @@
 #!/bin/bash
 
+set -e
+
 for directory in */ ; do
     cd "$directory"
     for file in *.c ; do
       echo "gcc $file"
-      gcc $file > /dev/null
+      gcc -w $file > /dev/null
     done
     cd ..
 done
