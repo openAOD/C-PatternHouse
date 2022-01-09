@@ -11,4 +11,4 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - ./Build.sh
+            - sh ./Build.sh
