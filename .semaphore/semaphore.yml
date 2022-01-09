@@ -5,9 +5,11 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: 'Block #1'
+  - name: Deploy to Manifests Database
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Depoy
           commands:
-            - checkout
+            - echo $SEMAPHORE_GIT_SHA > $SEMAPHORE_PROJECT_NAME.sha.manifest
+            - ls
+            - cat $SEMAPHORE_PROJECT_NAME.sha.manifest
