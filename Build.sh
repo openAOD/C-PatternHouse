@@ -1,8 +1,10 @@
 #!/bin/bash
 
 for directory in */ ; do
-    cd "$directory"
-    for file in . ; do
-      gcc file
+    pushd "$directory"
+    for file in *.c ; do
+      echo "gcc $file"
+      gcc $file > /dev/null
     done
+    popd
 done
