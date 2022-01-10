@@ -6,7 +6,7 @@ for directory in */ ; do
     cd "$directory"
     for file in *.c ; do
       echo "gcc $file"
-      gcc -w $file > /dev/null
+      gcc -w -lm $file > /dev/null
     done
     cd ..
 done
