@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main(){
-
     int n=5;
-
-    int k=1;
-    for(int i=0; i<n; i++){
-        for(int j=0; j<n-i; j++){
-            printf("  ");
+    int i,j;
+    int p=1, c=1;
+    for(i=1;i<=n;i++){
+        for (j=n;j>=i;j--){
+            printf(" ");
         }
-        for(int j=0; j<i; j++){
-            printf("%d ",pow(2,j));
-        }
-        for(int j=i; j>=0; j--){
-            printf("%d ",pow(2,j));
+        p=1;
+        printf("%d", p);
+        while(c<i){
+            printf("%d",p/=2)
+            c--;
         }
         printf("\n");
     }
+    return 0;
 }
