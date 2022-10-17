@@ -1,5 +1,7 @@
 # C- PatternHouse
 
+Automated Test Suite Status: [![Build Status](https://openaod.semaphoreci.com/badges/C-PatternHouse/branches/master.svg)](https://openaod.semaphoreci.com/projects/C-PatternHouse)
+
 <p align="center">
   <img src="https://github.com/aryashah2k/Printing-Pattern-Programs/blob/main/assets/c.png">
 </p>
