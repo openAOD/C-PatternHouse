@@ -11,7 +11,7 @@ int main(){
         p=1;
         printf("%d", p);
         while(c<i){
-            printf("%d",p/=2)
+            printf("%d",p/=2);
             c--;
         }
         printf("\n");
