@@ -19,5 +19,5 @@ blocks:
             - 'echo "Subject: [TestSuite] Passed" > mail'
             - echo "C-PatternHouse Test Report" >> mail
             - cat test-report >> mail
-            - sudo apt -y install sendmail
-            - sendmail monitoring@openaod.org mail
+            - sudo apt -y install sendutils
+            - 'mail -s "[TestSuite] Test Report" < mail'
