@@ -5,10 +5,13 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: Build Files
+  - name: Test Suite
     task:
       jobs:
-        - name: Build
+        - name: Test
           commands:
             - checkout
-            - sh ./Build.sh
+            - 'git clone https://github.com/openAOD/Central.git'
+            - cp Central/TestSuite/test.sh .
+            - rm -rf Central
+            - bash test.sh c
