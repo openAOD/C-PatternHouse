@@ -14,10 +14,5 @@ blocks:
             - 'git clone https://github.com/openAOD/Central.git'
             - cp Central/TestSuite/test.sh .
             - rm -rf Central
-            - bash test.sh c | tee test-report
-            - touch mail
-            - 'echo "Subject: [TestSuite] Passed" > mail'
-            - echo "C-PatternHouse Test Report" >> mail
-            - cat test-report >> mail
-            - sudo apt -y install mailutils
-            - 'mail -s "[TestSuite] Test Report" < mail'
+            - bash test.sh c | tee "test-report-$(date)"
+            - artifact push project "test-report-*"
