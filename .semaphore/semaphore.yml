@@ -14,5 +14,6 @@ blocks:
             - 'git clone https://github.com/openAOD/Central.git'
             - cp Central/TestSuite/test.sh .
             - rm -rf Central
-            - bash test.sh c | tee "test-report-$(date)"
-            - artifact push project "test-report-*"
+            - export DATE=$(date)
+            - bash test.sh c | tee "test-report-$DATE"
+            - artifact push project "test-report-$DATE"
