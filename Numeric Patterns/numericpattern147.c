@@ -10,7 +10,7 @@ int main(){
             printf("%d ",n-i+1);
         }
         for(int j=i; j<n; j++){
-            printf("%c ",char(ch+i-1));
+            printf("%c ", (char)(ch+i-1));
         }
         printf("\n");
     }
